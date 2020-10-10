@@ -65,7 +65,7 @@ class RemindersFragment : Fragment() {
 
         // Callback which is used to create the ItemTouch helper. Only enables left swipe.
         // Use ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) to also enable right swipe.
-        val callback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+        val callback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
 
             // Enables or Disables the ability to move items up and down.
             override fun onMove(
