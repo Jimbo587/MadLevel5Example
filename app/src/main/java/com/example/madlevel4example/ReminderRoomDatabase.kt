@@ -9,7 +9,7 @@ import com.example.madlevel4example.Reminder
 @Database(entities = [Reminder::class], version = 1, exportSchema = false)
 abstract class ReminderRoomDatabase : RoomDatabase() {
 
-    abstract fun reminderDao(): ReminderDao
+    abstract fun reminderDao(): ReminderDAO
 
     companion object {
         private const val DATABASE_NAME = "REMINDER_DATABASE"

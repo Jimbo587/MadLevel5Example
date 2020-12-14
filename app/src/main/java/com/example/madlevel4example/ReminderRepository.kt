@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 
 public class ReminderRepository(context: Context) {
 
-    private var reminderDao: ReminderDao
+    private var reminderDao: ReminderDAO
 
     init {
         val reminderRoomDatabase = ReminderRoomDatabase.getDatabase(context)
@@ -18,7 +18,7 @@ public class ReminderRepository(context: Context) {
         MutableLiveData(emptyList())
     }
 
-    suspend fun insertReminder(reminder: Reminder) {
+    fun insertReminder(reminder: Reminder) {
         reminderDao.insertReminder(reminder)
     }
 
